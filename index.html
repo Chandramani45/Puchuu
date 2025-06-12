@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mani & Alisha</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff4b7d, #c9184a);
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: slideIn 2s ease-out;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+      max-width: 600px;
+    }
+
+    .heart {
+      position: absolute;
+      animation: floatUp 5s infinite ease-in;
+      font-size: 24px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: -50px;
+        opacity: 0;
+        transform: translateX(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(20px);
+      }
+      100% {
+        bottom: 100vh;
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="background_music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1>Mani & Alisha together since 01 March 2025 🥰</h1>
+    <p>
+      Her smile is my sunrise 🌅, her eyes are stars that guide me 🌟.<br>
+      Her voice melts my soul 🎶, her laugh fills my world with joy 🥺.<br>
+      Her beauty is beyond words 🌸, her presence my peace 🕊️.<br>
+      She is my heartbeat 💓, my dream come true 💖.
+    </p>
+    <h2>My Puchu 🥰💫</h2>
+    <p>
+      Since the day we met, my world has been full of joy 🥺.<br>
+      Your laughter is music 🎶, your innocence a blessing 😇, and your beauty... simply divine 🌸.<br>
+      You are my sunshine 🌞, my peace 🕊️, my forever 💍.<br><br>
+      <strong>Tum mere ho... mere hi rehna 💫💞</strong><br><br>
+      — Yours always,<br>Mani 🌹💞
+    </p>
+  </div>
+
+  <!-- Flying hearts -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+    setInterval(createHeart, 800);
+  </script>
+</body>
+</html>
